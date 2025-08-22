@@ -1,11 +1,13 @@
+------------------------------------------------------------
 Sentiment Classification Deployment (FastAPI + MLflow + Docker)
+------------------------------------------------------------
 
 This project demonstrates an end-to-end ML deployment workflow using a sentiment classification model trained on the IMDB dataset.
 It covers the full lifecycle from model training and experiment tracking (MLflow), to serving via FastAPI API,
 and containerization with Docker, with built-in monitoring (latency, error logging, drift detection).
 
 ------------------------------------------------------------
-✨ Highlights
+Highlights
 ------------------------------------------------------------
 - End-to-end ML pipeline with training → logging → serving
 - FastAPI service exposing real-time predictions
@@ -14,7 +16,7 @@ and containerization with Docker, with built-in monitoring (latency, error loggi
 - Monitoring pipeline: latency logging, error logging, and drift detection (KL-divergence)
 
 ------------------------------------------------------------
-📂 Project Structure
+Project Structure
 ------------------------------------------------------------
 sentiment-deploy/
 │── app/
@@ -28,7 +30,7 @@ sentiment-deploy/
 │── README.txt
 
 ------------------------------------------------------------
-⚙️ Setup & Usage
+Setup & Usage
 ------------------------------------------------------------
 
 1. Install dependencies
@@ -71,7 +73,7 @@ sentiment-deploy/
    API available at http://127.0.0.1:8000/docs
 
 ------------------------------------------------------------
-📝 Monitoring
+Monitoring
 ------------------------------------------------------------
 - Latency & Errors: Logged for each request in logs/app.log
 - Drift Detection: KL-divergence between training word distribution and incoming text
@@ -81,23 +83,10 @@ Example log:
 2025-08-22 12:30:45,124 - INFO - Drift KL-divergence: 0.0042
 
 ------------------------------------------------------------
-📦 Tech Stack
+Tech Stack
 ------------------------------------------------------------
 - ML: scikit-learn, MLflow
 - Serving: FastAPI, Uvicorn
 - Monitoring: Logging + Drift Detection
 - Deployment: Docker
 
-------------------------------------------------------------
-✅ Next Steps
-------------------------------------------------------------
-- Add CI/CD pipeline with GitHub Actions
-- Deploy to AWS Fargate or ECS for serverless serving
-- Extend monitoring with Prometheus + Grafana
-
-------------------------------------------------------------
-📌 Resume-Ready Summary
-------------------------------------------------------------
-Built an end-to-end ML deployment project: trained sentiment classifier (IMDB), tracked experiments with MLflow,
-served model via FastAPI API, containerized with Docker, and implemented monitoring pipeline
-(latency, error logging, drift detection).
